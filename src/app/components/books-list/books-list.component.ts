@@ -11,9 +11,21 @@ export class BooksListComponent implements OnInit {
 
   constructor() {
     this.books = [
-      {title: 'Peace and War'},
-      {title: 'East of Edem'},
-      {title: 'Grape of Wrath'},
+      {
+        title: 'Peace and War',
+        author: 'Lev Tolstoy',
+        status: '',
+      },
+      {
+        title: 'East of Edem',
+        author: 'Steinbeck',
+        status: '',
+      },
+      {
+        title: 'Grape of Wrath',
+        author: 'Steinbeck',
+        status: '',
+      },
     ];
   }
 
