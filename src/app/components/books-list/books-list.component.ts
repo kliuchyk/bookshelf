@@ -12,8 +12,8 @@ export class BooksListComponent implements OnInit {
   constructor() {
     this.books = [
       {
-        title: 'Peace and War',
-        author: 'Lev Tolstoy',
+        title: 'Of mice and men',
+        author: 'Steinbeck',
         status: '',
       },
       {
@@ -22,8 +22,13 @@ export class BooksListComponent implements OnInit {
         status: '',
       },
       {
-        title: 'Grape of Wrath',
+        title: 'Cannery row',
         author: 'Steinbeck',
+        status: '',
+      },
+      {
+        title: 'Code: The Hidden Language of Computer Hardware and Software',
+        author: 'Charles Petzold',
         status: '',
       },
     ];
