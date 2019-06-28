@@ -20,10 +20,7 @@ export class BooksListComponent implements OnInit {
 
   getBooks() {
     this.bookSerive
-      .getBooks()
-      .subscribe(res => {
-        this.books = res
-      });
+      .getBooks().subscribe(res => this.books = res);
   }
 
   ngOnInit() {
