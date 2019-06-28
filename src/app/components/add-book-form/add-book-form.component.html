@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+  <input type="text"
+         placeholder="Book Title"
+         formControlName="title">
+
+  <input type="text"
+         placeholder="Book Author"
+         formControlName="author">
+
+  <select formControlName="list">
+    <option *ngFor="let option of bookListOptions"
+            [value]="option.name">{{option.displayName}}</option>
+  </select>
+
+  <button (click)="onSubmit()">Add Book</button>
+</form>

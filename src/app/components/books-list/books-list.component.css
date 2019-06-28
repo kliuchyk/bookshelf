@@ -1,0 +1,11 @@
+.row {
+  list-style: none;
+  border-bottom: 1px solid #aaa;
+  width: 600px;
+}
+
+.remove {
+  font-size: 18px;
+  font-weight: bold;
+  color: #aaa;
+}

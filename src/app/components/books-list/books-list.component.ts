@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { BooksService } from '../../services/books/books.service';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-books-list',
   templateUrl: './books-list.component.html',
@@ -7,34 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksListComponent implements OnInit {
 
-  books: any[];
+  books;
 
-  constructor() {
-    this.books = [
-      {
-        title: 'Of mice and men',
-        author: 'Steinbeck',
-        status: '',
-      },
-      {
-        title: 'East of Edem',
-        author: 'Steinbeck',
-        status: '',
-      },
-      {
-        title: 'Cannery row',
-        author: 'Steinbeck',
-        status: '',
-      },
-      {
-        title: 'Code: The Hidden Language of Computer Hardware and Software',
-        author: 'Charles Petzold',
-        status: '',
-      },
-    ];
+  constructor(private bookSerive: BooksService) {
+  }
+
+  deleteBook(book) {
+    this.bookSerive.deleteBook(book);
+  }
+
+  getBooks() {
+    this.bookSerive
+      .getBooks()
+      .subscribe(res => {
+        this.books = res
+      });
   }
 
   ngOnInit() {
+    this.getBooks();
   }
 
 }

@@ -1,5 +1,13 @@
-<ul>
-  <li *ngFor="let book of books">
-    <app-book-details [book]="book"></app-book-details>
-  </li>
-</ul>
+<div class="container">
+  <h3>My Books</h3>
+  <p *ngIf="!books.length">There are no books added yet.</p>
+  <ul>
+    <li *ngFor="let book of books"
+        class="row">
+      <span>{{book.payload.doc.data().title}} - </span>
+      <span>{{book.payload.doc.data().author}} - </span>
+      <span>{{book.payload.doc.data().list}}</span>
+      <span class="remove" (click)="deleteBook(book)">x</span>
+    </li>
+  </ul>
+</div>
