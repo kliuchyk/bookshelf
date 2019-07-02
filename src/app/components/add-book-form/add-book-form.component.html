@@ -8,9 +8,10 @@
          formControlName="author">
 
   <select formControlName="list">
+    <option [value]="null" disabled>Choose a list</option>
     <option *ngFor="let option of bookListOptions"
             [value]="option.name">{{option.displayName}}</option>
   </select>
 
-  <button (click)="onSubmit()">Add Book</button>
+  <button class="btn" (click)="onSubmit()">Add Book</button>
 </form>

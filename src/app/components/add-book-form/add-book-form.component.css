@@ -1,0 +1,18 @@
+input {
+  padding: 10px;
+}
+
+input, select {
+  width: 320px;
+  display: block;
+  height: 35px;
+  border-radius: 3px;
+  outline: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  /* border: 1px solid #999; */
+  border: none;
+  background: #ddd;
+}
+
