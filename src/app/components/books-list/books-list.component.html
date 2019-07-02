@@ -1,13 +1,20 @@
 <div class="container">
-  <h3>My Books</h3>
+  <h3 class="list-header">My Books</h3>
   <p *ngIf="!books.length">There are no books added yet.</p>
   <ul>
-    <li *ngFor="let book of books"
-        class="row">
+    <li *ngFor="let book of books; index as bookId"
+        class="row"
+        [routerLink]="['/books', bookId]">
       <span>{{book.payload.doc.data().title}} - </span>
       <span>{{book.payload.doc.data().author}} - </span>
       <span>{{book.payload.doc.data().list}}</span>
-      <span class="remove" (click)="deleteBook(book)">x</span>
+      <!-- <span class="remove" (click)="deleteBook(book)">x</span> -->
+      <!-- TODO: uncomment when find solution to separate events (stop propagation) -->
+      <span class="remove">x</span>
     </li>
   </ul>
 </div>
+
+<button class="btn">
+  <a [routerLink]="['/form']">Add new book</a>
+</button>

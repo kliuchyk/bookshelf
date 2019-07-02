@@ -3,3 +3,14 @@
   margin: 0;
   font-family: 'Roboto', Arial, sans-serif;
 }
+
+.btn {
+  margin: 15px 0;
+  outline: none;
+  padding: 10px;
+  background: #1976d2;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}

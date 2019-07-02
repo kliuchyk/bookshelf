@@ -9,22 +9,22 @@ import { BooksService } from '../../services/books/books.service';
 })
 export class BooksListComponent implements OnInit {
 
-  books;
+  books = [];
 
-  constructor(private bookSerive: BooksService) {
+  constructor(private booksService: BooksService) {
+    this.getBooks();
   }
 
   deleteBook(book) {
-    this.bookSerive.deleteBook(book);
+    this.booksService.deleteBook(book);
   }
 
   getBooks() {
-    this.bookSerive
+    this.booksService
       .getBooks().subscribe(res => this.books = res);
   }
 
   ngOnInit() {
-    this.getBooks();
   }
 
 }

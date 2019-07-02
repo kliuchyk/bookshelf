@@ -1,3 +1,10 @@
+<h3>Book details:</h3>
+<div *ngIf="book">
+  <h3>{{ book.payload.doc.data().title }}</h3>
+  <span>{{book.payload.doc.data().author}} - </span>
+  <span>{{book.payload.doc.data().list}}</span>
+</div>
+
 <div>
-  <h3>{{ book.title }}</h3>
+  <button class="btn">Add notes</button>
 </div>

@@ -1,11 +1,29 @@
 .row {
   list-style: none;
-  border-bottom: 1px solid #aaa;
-  width: 600px;
+  background: #eee;
+  padding: 10px 15px;
+  width: 520px;
+  border-radius: 3px;
+  color: #524f4f;
+  cursor: pointer;
+  margin-top: 7px;
+  outline: none;
 }
 
 .remove {
   font-size: 18px;
   font-weight: bold;
-  color: #aaa;
+  /* todo: update to flex */
+  float: right;
+}
+
+.list-header {
+  color: #524f4f;
+  font-size: 20px;
+}
+
+.btn a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
 }

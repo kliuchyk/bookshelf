@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
@@ -25,6 +26,11 @@ import { BooksService } from './services/books/books.service';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    RouterModule.forRoot([
+      { path: '', component: BooksListComponent },
+      { path: 'books/:bookId', component: BookDetailsComponent },
+      { path: 'form', component: AddBookFormComponent },
+    ]),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
   ],

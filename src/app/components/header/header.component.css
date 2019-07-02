@@ -1,6 +1,14 @@
 .main-header {
   background: #1976d2;
-  padding: 20px 35px;
+  padding: 20px 0;
   color: #fff;
   font: 24px bold;
+}
+
+.app-logo {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
 }
