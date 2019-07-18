@@ -8,9 +8,7 @@
       <span>{{book.payload.doc.data().title}} - </span>
       <span>{{book.payload.doc.data().author}} - </span>
       <span>{{book.payload.doc.data().list}}</span>
-      <!-- <span class="remove" (click)="deleteBook(book)">x</span> -->
-      <!-- TODO: uncomment when find solution to separate events (stop propagation) -->
-      <span class="remove">x</span>
+      <span class="remove" (click)="deleteBook(book); $event.stopImmediatePropagation()">x</span>
     </li>
   </ul>
 </div>
