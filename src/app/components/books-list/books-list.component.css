@@ -4,7 +4,6 @@
   padding: 10px 15px;
   width: 520px;
   border-radius: 3px;
-  color: #524f4f;
   cursor: pointer;
   margin-top: 7px;
   outline: none;
@@ -18,7 +17,6 @@
 }
 
 .list-header {
-  color: #524f4f;
   font-size: 20px;
 }
 

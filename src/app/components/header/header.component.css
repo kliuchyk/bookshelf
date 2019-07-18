@@ -1,14 +1,21 @@
 .main-header {
   background: #1976d2;
   padding: 20px 0;
-  color: #fff;
   font: 24px bold;
+  display: flex;
+  line-height: 40px;
+}
+
+.wrapper-container {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .app-logo {
-  width: 80%;
-  margin: 0 auto;
+  display: inline-block;
   text-align: left;
   cursor: pointer;
   outline: none;
+  color: #fff;
+  margin-right: 500px;
 }
