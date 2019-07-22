@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class GoogleService {
+export class GoogleBooksService {
 
   constructor(private http: HttpClient) { }
 
