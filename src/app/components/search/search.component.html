@@ -1,5 +1,8 @@
-<input class="search-field"
-  type="text"
-  placeholder="Search books"
-  #searchInput
-  (keyup)="searchBooks(searchInput.value)">
+<div>
+  <h3>Search</h3>
+  <app-search-input (searchEvent)="receiveMessage($event)"></app-search-input>
+
+  <div *ngIf="books">
+    <li *ngFor="let book of books">{{book.volumeInfo.authors}}</li>
+  </div>
+</div>

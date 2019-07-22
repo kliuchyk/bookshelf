@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { GoogleService } from 'src/app/services/books/googleBooks.service';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { SearchInputComponent } from '../search-input/search-input.component';
 
 @Component({
   selector: 'app-search',
@@ -9,13 +9,11 @@ import { GoogleService } from 'src/app/services/books/googleBooks.service';
 export class SearchComponent implements OnInit {
   books = [];
 
-  constructor(private booksService: GoogleService) { }
+  constructor() { }
 
-  searchBooks(value) {
-    this.booksService.getBooksFromGoogle(value)
-      .subscribe((response: any) => {
-        return this.books = response.items;
-      });
+  receiveMessage(event) {
+    console.log(event);
+    this.books = event;
   }
 
   ngOnInit() {

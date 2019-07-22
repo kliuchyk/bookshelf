@@ -13,9 +13,10 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
 import { BooksListComponent } from './components/books-list/books-list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AddBookFormComponent } from './components/add-book-form/add-book-form.component';
-import { SearchComponent } from './components/search/search.component';
+import { SearchInputComponent } from './components/search-input/search-input.component';
 
 import { BooksService } from './services/books/books.service';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BooksService } from './services/books/books.service';
     BooksListComponent,
     HeaderComponent,
     AddBookFormComponent,
-    SearchComponent
+    SearchInputComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,7 @@ import { BooksService } from './services/books/books.service';
       { path: '', component: BooksListComponent },
       { path: 'books/:bookId', component: BookDetailsComponent },
       { path: 'form', component: AddBookFormComponent },
+      { path: 'search', component: SearchComponent },
     ]),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
