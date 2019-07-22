@@ -4,7 +4,7 @@ import { GoogleBooksService } from 'src/app/services/books/googleBooks.service';
 @Component({
   selector: 'app-search-input',
   templateUrl: './search-input.component.html',
-  styleUrls: ['./search-input.component.css']
+  styleUrls: ['./search-input.component.scss']
 })
 export class SearchInputComponent implements OnInit {
   books = [];

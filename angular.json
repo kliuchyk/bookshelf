@@ -123,5 +123,10 @@
       }
     }
   },
-  "defaultProject": "books-shelf"
+  "defaultProject": "books-shelf",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
