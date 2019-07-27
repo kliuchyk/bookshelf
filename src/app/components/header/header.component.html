@@ -1,6 +1,7 @@
-<header class="main-header">
-  <div class="wrapper-container">
-    <div class="app-logo" [routerLink]="['/']">BookShelf</div>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="app-logo" [routerLink]="['/']">BookShelf</span>
+    <span class="fill-remaining-space"></span>
     <app-search-input></app-search-input>
-  </div>
-</header>
+  </mat-toolbar-row>
+</mat-toolbar>

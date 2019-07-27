@@ -5,8 +5,10 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { environment } from 'src/environments/environment';
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
@@ -14,9 +16,10 @@ import { BooksListComponent } from './components/books-list/books-list.component
 import { HeaderComponent } from './components/header/header.component';
 import { AddBookFormComponent } from './components/add-book-form/add-book-form.component';
 import { SearchInputComponent } from './components/search-input/search-input.component';
+import { SearchComponent } from './components/search/search.component';
 
 import { BooksService } from './services/books/books.service';
-import { SearchComponent } from './components/search/search.component';
+import { MaterialModule } from './shared/material.module';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,8 @@ import { SearchComponent } from './components/search/search.component';
     ]),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [BooksService],
   bootstrap: [AppComponent]

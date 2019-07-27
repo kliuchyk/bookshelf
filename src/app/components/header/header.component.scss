@@ -1,21 +1,23 @@
-.main-header {
-  background: #1976d2;
-  padding: 20px 0;
+mat-toolbar {
   font: 24px bold;
-  display: flex;
-  line-height: 40px;
+
+  .fill-remaining-space {
+    /* This fills the remaining space, by using flexbox.
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
 }
 
-.wrapper-container {
+mat-toolbar-row {
   width: 80%;
   margin: 0 auto;
 }
 
 .app-logo {
-  display: inline-block;
+  // display: inline-block;
   text-align: left;
   cursor: pointer;
   outline: none;
   color: #fff;
-  margin-right: 500px;
+  // margin-right: 500px;
 }
